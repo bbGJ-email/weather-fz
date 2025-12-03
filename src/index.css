@@ -1,0 +1,116 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    --background: 210 100% 97%;
+    --foreground: 210 40% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 40% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 40% 15%;
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 210 100% 65%;
+    --secondary: 210 40% 92%;
+    --secondary-foreground: 210 40% 20%;
+    --muted: 210 40% 94%;
+    --muted-foreground: 210 20% 50%;
+    --accent: 210 100% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 40% 88%;
+    --input: 210 40% 88%;
+    --ring: 210 100% 50%;
+    --chart-1: 210 100% 50%;
+    --chart-2: 210 80% 60%;
+    --chart-3: 210 60% 70%;
+    --chart-4: 210 40% 80%;
+    --chart-5: 210 20% 90%;
+    --sunny-bg: 200 100% 95%;
+    --cloudy-bg: 210 20% 92%;
+    --rainy-bg: 220 40% 88%;
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 50%), hsl(210 100% 65%));
+    --gradient-sunny: linear-gradient(135deg, hsl(200 100% 70%), hsl(210 100% 85%));
+    --gradient-cloudy: linear-gradient(135deg, hsl(210 20% 70%), hsl(210 20% 85%));
+    --gradient-rainy: linear-gradient(135deg, hsl(220 60% 50%), hsl(220 40% 70%));
+    --shadow-card: 0 4px 20px -4px hsl(210 100% 50% / 0.15);
+    --shadow-hover: 0 8px 30px -6px hsl(210 100% 50% / 0.25);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 220 40% 8%;
+    --foreground: 210 40% 95%;
+    --card: 220 35% 12%;
+    --card-foreground: 210 40% 95%;
+    --popover: 220 35% 12%;
+    --popover-foreground: 210 40% 95%;
+    --primary: 210 100% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 210 100% 70%;
+    --secondary: 220 30% 18%;
+    --secondary-foreground: 210 40% 95%;
+    --muted: 220 30% 16%;
+    --muted-foreground: 210 20% 60%;
+    --accent: 210 100% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 30% 20%;
+    --input: 220 30% 20%;
+    --ring: 210 100% 55%;
+    --chart-1: 210 100% 55%;
+    --chart-2: 210 80% 65%;
+    --chart-3: 210 60% 75%;
+    --chart-4: 210 40% 85%;
+    --chart-5: 210 20% 95%;
+    --sunny-bg: 200 60% 15%;
+    --cloudy-bg: 210 20% 12%;
+    --rainy-bg: 220 40% 10%;
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 55%), hsl(210 100% 70%));
+    --gradient-sunny: linear-gradient(135deg, hsl(200 60% 30%), hsl(210 60% 45%));
+    --gradient-cloudy: linear-gradient(135deg, hsl(210 20% 20%), hsl(210 20% 35%));
+    --gradient-rainy: linear-gradient(135deg, hsl(220 60% 25%), hsl(220 40% 40%));
+    --shadow-card: 0 4px 20px -4px hsl(210 100% 30% / 0.3);
+    --shadow-hover: 0 8px 30px -6px hsl(210 100% 30% / 0.4);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  
+  .weather-card {
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-card);
+  }
+  
+  .weather-card:hover {
+    box-shadow: var(--shadow-hover);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
